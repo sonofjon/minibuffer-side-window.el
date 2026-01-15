@@ -33,6 +33,16 @@
 
 ;;; Code:
 
+;;; External declarations
+
+;; Functions
+(declare-function vertico-buffer-mode "vertico-buffer" (&optional arg))
+
+;; Variables
+(defvar vertico-buffer-display-action nil "Defined in vertico-buffer.el.")
+(defvar embark-verbose-indicator-display-action nil "Defined in embark.el.")
+(defvar which-key-popup-type nil "Defined in which-key.el.")
+
 ;;; Customization
 
 (defgroup minibuffer-side-window nil
