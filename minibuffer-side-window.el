@@ -25,11 +25,6 @@
 ;;
 ;;   (require 'minibuffer-side-window)
 ;;   (minibuffer-side-window-mode 1)
-;;
-;; Configuration:
-;;
-;;   Customize `minibuffer-side-window-height' to adjust the height of the
-;;   side-window.
 
 ;;; Code:
 
@@ -49,11 +44,6 @@
   "Side-window display for minibuffer packages."
   :group 'convenience
   :prefix "minibuffer-side-window-")
-
-(defcustom minibuffer-side-window-height 0.16
-  "Height of bottom side-window as fraction of frame height."
-  :type 'number
-  :group 'minibuffer-side-window)
 
 ;;; Internal variables
 
@@ -117,9 +107,8 @@ Package-specific requirements:
     (setq minibuffer-side-window--vertico-display-action-saved
           vertico-buffer-display-action)
     (setq vertico-buffer-display-action
-          `(display-buffer-in-side-window
+          '(display-buffer-in-side-window
             (side . bottom)
-            (window-height . ,minibuffer-side-window-height)
             (window-parameters . ((mode-line-format . none))))))
   ;; Embark
   (with-eval-after-load 'embark

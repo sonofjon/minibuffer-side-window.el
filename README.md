@@ -73,18 +73,6 @@ Toggle the mode:
 M-x minibuffer-side-window-mode
 ```
 
-### Configuration
-
-Customize the height of the side-window:
-
-```elisp
-(setq minibuffer-side-window-height 0.16)  ; 16% of frame height (default)
-```
-
-The height can be:
-- A float between 0.0 and 1.0 (fraction of frame height)
-- An integer (number of lines)
-
 ## How It Works
 
 Emacs' built-in functions `display-buffer-in-side-window` and
@@ -93,15 +81,19 @@ creating new windows, not when reusing existing ones. This package works
 around this limitation by adding advice to ensure side-windows are properly
 resized each time they are reused.
 
-Each package is configured appropriately:
+Each package is configured to display in the bottom side-window:
 
-- **Vertico**: Enables `vertico-buffer-mode` and configures
-  `vertico-buffer-display-action` to use a bottom side-window
+- **Vertico**: Enables `vertico-buffer-mode` and sets
+  `vertico-buffer-display-action` to use a bottom side-window. No height is
+  specified, so Emacs uses its default side-window height.
 
-- **Embark**: Configures `embark-verbose-indicator-display-action` to
-  display in the bottom side-window with dynamic height
+- **Embark**: Sets `embark-verbose-indicator-display-action` to display in
+  the bottom side-window and dynamically fit to buffer content (up to 50% of
+  frame height).
 
-- **Which-key**: Sets `which-key-popup-type` to `'side-window`
+- **Which-key**: Sets `which-key-popup-type` to `'side-window`. Height is
+  managed by which-key's own customization variable
+  `which-key-side-window-max-height`.
 
 When disabled, the mode restores each package to its original configuration.
 
