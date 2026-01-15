@@ -154,10 +154,7 @@ Package-specific requirements:
   "Toggle side-window display for vertico, embark, and which-key.
 
 When enabled, these packages display in the bottom side-window.  When
-disabled, they use standard minibuffer display.
-
-Note: The minibuffer prompt may remain visible at the bottom of the
-frame when displaying in the side-window."
+disabled, they use standard minibuffer display."
   :global t
   :group 'minibuffer-side-window
   (if minibuffer-side-window-mode

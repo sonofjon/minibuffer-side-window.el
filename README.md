@@ -104,6 +104,11 @@ When disabled, the mode restores each package to its original configuration.
 
 ## Known Issues
 
-- The minibuffer prompt may remain visible at the bottom of the frame when
-  displaying in the side-window. This is a cosmetic issue and does not
-  affect functionality.
+### Minibuffer Prompt Visibility
+
+In terminal Emacs, the minibuffer prompt remains visible at the bottom of
+the frame. (In GUI Emacs, the prompt is hidden correctly.) This appears to
+be a limitation of vertico-buffer-mode's prompt-hiding mechanism, which uses
+`set-window-vscroll` to hide the prompt. The exact cause is unclear but may
+involve Emacs scroll configuration settings (such as `scroll-step` or
+`scroll-conservatively`), terminal display limitations, or other factors.
