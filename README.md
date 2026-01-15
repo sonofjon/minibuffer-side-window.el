@@ -1,4 +1,4 @@
-# minibuffer-side-window
+# minibuffer-side-window-mode
 
 A minor mode that displays vertico, embark, and which-key in a bottom
 side-window instead of the standard minibuffer.
@@ -26,17 +26,17 @@ correctly each time it is reused.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/sonofjon/minibuffer-side-window.el.git
+   git clone https://github.com/sonofjon/minibuffer-side-window-mode.el.git
    ```
 
 2. Add the directory to your Emacs `load-path`:
    ```elisp
-   (add-to-list 'load-path "/path/to/minibuffer-side-window.el")
+   (add-to-list 'load-path "/path/to/minibuffer-side-window-mode.el")
    ```
 
 3. Load and enable the mode:
    ```elisp
-   (require 'minibuffer-side-window)
+   (require 'minibuffer-side-window-mode)
    (minibuffer-side-window-mode 1)
    ```
 
@@ -45,8 +45,8 @@ correctly each time it is reused.
 If you use `use-package`, you can install directly from GitHub:
 
 ```elisp
-(use-package minibuffer-side-window
-  :vc (:url "https://github.com/sonofjon/minibuffer-side-window.el.git")
+(use-package minibuffer-side-window-mode
+  :vc (:url "https://github.com/sonofjon/minibuffer-side-window-mode.el.git")
   :after (vertico embark which-key)
   :config
   (minibuffer-side-window-mode 1))

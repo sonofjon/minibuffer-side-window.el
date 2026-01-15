@@ -1,10 +1,10 @@
-;;; minibuffer-side-window.el --- Side-window display for minibuffer packages -*- lexical-binding: t; -*-
+;;; minibuffer-side-window-mode.el --- Side-window display for minibuffer packages -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2026 Andreas Jonsson
 ;;
 ;; Author: Andreas Jonsson <ajdev8@gmail.com>
 ;; Maintainer: Andreas Jonsson <ajdev8@gmail.com>
-;; URL: https://github.com/sonofjon/minibuffer-side-window.el
+;; URL: https://github.com/sonofjon/minibuffer-side-window-mode.el
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "29.1"))
 ;; Keywords: convenience
@@ -23,7 +23,7 @@
 ;;
 ;; Usage:
 ;;
-;;   (require 'minibuffer-side-window)
+;;   (require 'minibuffer-side-window-mode)
 ;;   (minibuffer-side-window-mode 1)
 
 ;;; Code:
@@ -161,6 +161,6 @@ disabled, they use standard minibuffer display."
       (minibuffer-side-window--enable)
     (minibuffer-side-window--disable)))
 
-(provide 'minibuffer-side-window)
+(provide 'minibuffer-side-window-mode)
 
-;;; minibuffer-side-window.el ends here
+;;; minibuffer-side-window-mode.el ends here
