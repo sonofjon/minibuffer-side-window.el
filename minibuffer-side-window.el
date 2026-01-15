@@ -102,7 +102,7 @@ Package-specific requirements:
   (advice-add 'display-buffer-reuse-window :after
               #'minibuffer-side-window--resize-on-reuse)
   ;; Vertico
-  (with-eval-after-load 'vertico
+  (when (featurep 'vertico)
     (vertico-buffer-mode 1)
     (setq minibuffer-side-window--vertico-display-action-saved
           vertico-buffer-display-action)
@@ -111,7 +111,7 @@ Package-specific requirements:
             (side . bottom)
             (window-parameters . ((mode-line-format . none))))))
   ;; Embark
-  (with-eval-after-load 'embark
+  (when (featurep 'embark)
     (setq minibuffer-side-window--embark-display-action-saved
           embark-verbose-indicator-display-action)
     (setq embark-verbose-indicator-display-action
@@ -124,7 +124,7 @@ Package-specific requirements:
             (window-parameters . ((no-other-window . t)
                                   (mode-line-format . none))))))
   ;; Which-key
-  (with-eval-after-load 'which-key
+  (when (featurep 'which-key)
     (setq which-key-popup-type 'side-window)))
 
 (defun minibuffer-side-window--disable ()

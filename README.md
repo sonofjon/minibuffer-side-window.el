@@ -47,9 +47,14 @@ If you use `use-package`, you can install directly from GitHub:
 ```elisp
 (use-package minibuffer-side-window
   :vc (:url "https://github.com/sonofjon/minibuffer-side-window.el.git")
+  :after (vertico embark which-key)
   :config
   (minibuffer-side-window-mode 1))
 ```
+
+Note: The `:after` keyword ensures the mode is loaded after your completion
+packages. You can list only the packages you actually use (e.g., `:after
+vertico` if you only use vertico).
 
 ## Usage
 
