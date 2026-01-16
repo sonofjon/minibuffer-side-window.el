@@ -6,7 +6,7 @@
 ;; Maintainer: Andreas Jonsson <ajdev8@gmail.com>
 ;; URL: https://github.com/sonofjon/minibuffer-side-window-mode.el
 ;; Version: 0.1
-;; Package-Requires: ((emacs "29.1"))
+;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 
 ;;; Commentary:
