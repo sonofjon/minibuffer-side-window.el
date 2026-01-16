@@ -23,8 +23,10 @@
 ;;
 ;; Usage:
 ;;
-;;   (require 'minibuffer-side-window-mode)
-;;   (minibuffer-side-window-mode 1)
+;;   (use-package minibuffer-side-window-mode
+;;     :load-path "/path/to/minibuffer-side-window-mode.el"
+;;     :config
+;;     (minibuffer-side-window-mode 1))
 
 ;;; Code:
 

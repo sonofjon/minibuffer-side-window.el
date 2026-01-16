@@ -22,31 +22,13 @@ correctly each time it is reused.
 - Emacs 29.1+
 - Optional: vertico, embark, which-key (configured when loaded)
 
-### Manual Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sonofjon/minibuffer-side-window-mode.el.git
-   ```
-
-2. Add the directory to your Emacs `load-path`:
-   ```elisp
-   (add-to-list 'load-path "/path/to/minibuffer-side-window-mode.el")
-   ```
-
-3. Load and enable the mode:
-   ```elisp
-   (require 'minibuffer-side-window-mode)
-   (minibuffer-side-window-mode 1)
-   ```
-
-### Using use-package
-
-If you use `use-package`, you can install directly from GitHub:
-
 ```elisp
 (use-package minibuffer-side-window-mode
-  :vc (:url "https://github.com/sonofjon/minibuffer-side-window-mode.el.git")
+  ;; Load from a local copy
+  :load-path "/path/to/minibuffer-side-window-mode.el"
+  ;; ... or clone from GitHub
+  ;; :vc (:url "https://github.com/sonofjon/minibuffer-side-window-mode.el.git"
+  ;;          :rev :newest)
   :after (vertico embark which-key)
   :config
   (minibuffer-side-window-mode 1))
