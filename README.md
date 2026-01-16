@@ -11,7 +11,8 @@ correctly each time it is reused.
 
 ## Features
 
-- Displays vertico, embark, and which-key in a bottom side-window
+- Configures vertico, embark, and which-key to display in a bottom
+  side-window
 - Automatically resizes the side-window when reused by vertico, embark, or
   which-key
 
@@ -29,7 +30,7 @@ correctly each time it is reused.
   ;; ... or clone from GitHub
   ;; :vc (:url "https://github.com/sonofjon/minibuffer-side-window-mode.el.git"
   ;;          :rev :newest)
-  :after (vertico embark which-key)
+  :after (:any vertico embark which-key)
   :config
   (minibuffer-side-window-mode 1))
 ```
